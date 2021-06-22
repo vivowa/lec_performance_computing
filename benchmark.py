@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 
 import project as proj
 
-methods = ['proj.naive_mandelbrot(25, 2)']
+methods = ['proj.naive_mandelbrot(25, 2)', 'proj.numba_mandelbrot(25, 2)', 'proj.dask_mandelbrot(25,2)']
 
 
 for m in methods:
@@ -20,6 +20,7 @@ for m in methods:
     toc = time.time() - tic
 
     print('{:30s} : {:10.2e} [s]'.format(m, toc))
+
 
 
 mandelbrot_set = proj.naive_mandelbrot(25, 2)
